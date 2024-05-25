@@ -11,6 +11,8 @@
     <meta property="og:title" content="Towne Realty Group Website">
     <meta property="og:description" content="Greater Boston Rentals and Sales">
     <meta property="og:image" content="">
+    <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/contactform.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -111,24 +113,28 @@
                 We are thrilled to hear from you and learn about your real estate needs.
             </h3>
             <!--Form-->
-            <form class="cs-form" id="cs-form-1268" name="Contact Form" method="post">
+            <form class="cs-form" id="cs-form" name="Contact Form" method="post" onsubmit="submitToAPI(event)">
                 <label class="cs-label">
                     Name
-                    <input disabled class="cs-input" required type="text" id="name-1268" name="name" style="font-family: sans-serif;" placeholder="Name">
+                    <input  class="cs-input" required type="text" id="name-1268" name="name" style="font-family: sans-serif;" placeholder="Name">
                 </label>
                 <label class="cs-label cs-email">
                     Email
-                    <input disabled class="cs-input" required type="email" id="email-1268" name="email" style="font-family: sans-serif;" placeholder="Email">
+                    <input  class="cs-input" required type="email" id="email-1268" name="email" style="font-family: sans-serif;" placeholder="Email">
                 </label>
                 <label class="cs-label cs-phone">
                     Phone
-                    <input disabled class="cs-input" required type="phone" id="phone-1268" name="phone" style="font-family: sans-serif;" placeholder="Phone">
+                    <input  class="cs-input" required type="phone" id="phone-1268" name="phone" style="font-family: sans-serif;" placeholder="Phone">
                 </label>
                 <label class="cs-label">
                     Message
-                    <textarea disabled class="cs-input cs-textarea" required name="Message" id="message-1268" style="font-family: sans-serif;" placeholder="Write message..."></textarea>
+                    <textarea  class="cs-input cs-textarea" required name="Message" id="message-1268" style="font-family: sans-serif;" placeholder="Write message..."></textarea>
                 </label>
-                <button disabled class="cs-button-solid cs-submit" type="submit">Form Coming Soon!</button>
+                <div class="g-recaptcha" data-sitekey="6LdVznApAAAAAMyv788c6zf7RG5qaOclPo6xqGgZ" class="form-control" style="width:100%;" data-callback="ccb" data-expired-callback="onExpired"></div>
+                <input type="hidden" id="recaptcha-response" name="recaptcha-response" />
+                <input type="hidden" id="destination" name="destination" value="anthony@thetownere.com">
+                <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/callback.js"> </script>
+                <button disabled class="cs-button-solid cs-submit btn" type="submit">Form Coming Soon!</button>
             </form>
         </div>
         <div class="cs-wrapper">
@@ -217,7 +223,7 @@
 </footer>
                                 
                                 
-
+<script src="https://brokersites.s3.us-east-2.amazonaws.com/js/loader.js"></script> 
 <script src="js/nav.js"></script>
 </body>
 
