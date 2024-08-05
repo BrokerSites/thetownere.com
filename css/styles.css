@@ -2443,7 +2443,7 @@ body {
   }
   #team-1268 .cs-container {
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
   }
   #team-1268 .cs-content {
@@ -2451,6 +2451,7 @@ body {
       margin: 0;
       padding: 0;
       align-items: flex-start;
+      margin-top: 4em;
   }
   #team-1268 .cs-form-group {
       width: 43%;
@@ -2462,7 +2463,7 @@ body {
       padding: 0;
   }
   #team-1268 .cs-wrapper {
-      width: 50%;
+      width: 38%;
       max-width: 32.75rem;
       flex: none;
       /* removes position from it so the absolutely positioned background group can now be positioned relative to the section container */
@@ -2476,8 +2477,10 @@ body {
       top: 0;
   }
   #team-1268 .cs-card-group {
-      justify-content: center;
-      flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust the gap between items as needed */
+    justify-content: center;
   }
   #team-1268 .cs-item {
     width: 100%;
