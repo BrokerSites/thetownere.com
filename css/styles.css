@@ -1295,7 +1295,79 @@ body {
     }
 }
 
-                                
+
+/* Base Styles */
+.recently-sold-section .cs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: var(--sectionPadding);
+}
+
+.recently-sold-section .cs-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.recently-sold-section .cs-item {
+  width: calc(100% - 40px); /* Full width minus gap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recently-sold-section .cs-picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.recently-sold-section .cs-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 600px) {
+  .recently-sold-section .cs-item {
+      width: calc(50% - 40px); /* Two items per row */
+  }
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1024px) {
+  .recently-sold-section .cs-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 80rem;
+  }
+  .recently-sold-section .cs-item {
+      width: calc(33.333% - 40px); /* Three items per row */
+  }
+  .recently-sold-section{
+    padding: var(--sectionPadding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+.cs-property-location{
+  line-height: 16px;
+}
+
+
 /*-- -------------------------- -->
 <---          Footer            -->
 <--- -------------------------- -*/
